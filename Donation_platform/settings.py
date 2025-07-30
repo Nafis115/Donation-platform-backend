@@ -119,11 +119,11 @@ WSGI_APPLICATION = 'Donation_platform.wsgi.app'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.fhdltlxcfhiakcgopxaz',
-        'PASSWORD': 'SKf6Ky7k*Brf8Mh',
-        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
-        'PORT': '6543'
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASS"),
+        'HOST': env("DB_HOST"),
+        'PORT': env("DB_PORT"),
     }
 }
 
